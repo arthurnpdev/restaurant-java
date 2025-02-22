@@ -1,0 +1,41 @@
+package Restaurant;
+
+public class Check {
+	
+
+    private double conta = 0.00;
+    private final double sobremesa = 6.00;
+    private final double refrigerante = 5.00;
+    private final double cerveja = 10.00;
+    private final double kg = 30.00;
+
+    public void addSobremesa() {
+        conta += sobremesa;
+    }
+
+    public void addRefrigerante() {
+        conta += refrigerante;
+    }
+
+    public void addCerveja() {
+        conta += cerveja;
+    }
+
+    public void addValorPeso(double weight) {
+        conta += kg * weight;
+        System.out.println("Peso registrado: " + weight + " kg. Valor adicionado: R$ " + (kg * weight));
+    }
+
+    public int addClientes(int clientes, int novosClientes) {
+        return clientes + novosClientes;
+    }
+
+    public double dividirConta(int clientes) {
+        if (clientes == 0) return 0.0;
+        return conta / clientes;
+    }
+
+    public double getConta() {
+        return conta;
+    }
+}
